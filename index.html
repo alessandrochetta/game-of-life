@@ -1,0 +1,73 @@
+<style>
+    body {
+        background-color: #000a18;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #game-board {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border: 0.5px #040f1d solid;
+    }
+
+    .control-container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        color: gray;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .button {
+        border: 1px solid gray;
+        border-radius: 2px 4px;
+        padding: 4px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    #generation { 
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: gray;
+    }
+
+    .divisor {
+        margin: 20px 0;
+    }
+</style>
+
+<body>
+    <div id="generation"></div>
+    <div class="control-container" id="control-container">
+        <div class="button" onclick="start()">START</div>
+        <div class="button" onclick="stop()">STOP</div>
+        <div class="button" onclick="restart()">RESET</div>
+        <div class="button" onclick="clearBoard()">CLEAR</div>
+        <div class="button" onclick="save()">LOG</div>
+        <div class="divisor"></div>
+    </div>
+    <div id="game-board">
+
+    </div>
+</body>
+<script src="savedConfigurations.js"></script>
+<script src="index.js"></script>
